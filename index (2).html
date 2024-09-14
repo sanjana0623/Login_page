@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page with Dropdown</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff7043;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-box input[type="submit"]:hover {
+            background-color: #ff5722;
+        }
+        .login-box .dropdown {
+            margin: 10px 0;
+            position: relative;
+        }
+        .dropdown select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        /* Adding images of leaves */
+        .login-box img {
+            margin-top: 20px;
+        }
+        .background-trees {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('trees.png') no-repeat center center;
+            background-size: contain;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-trees"></div>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <div class="dropdown">
+                    <select name="categories">
+                        <option value="Everything">Everything</option>
+                        <option value="Software Development">Software Development</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Data Analyst">Data Analyst</option>
+                        <option value="IT Consultant">IT Consultant</option>
+                        <option value="Network Administrator">Network Administrator</option>
+                    </select>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+            <!-- Including the leaves images -->
+            <img src="leaf_01.png" alt="Leaf 1">
+            <img src="leaf_03.png" alt="Leaf 3">
+            <img src="leaf_04.png" alt="Leaf 4">
+        </div>
+    </div>
+</body>
+</html>
